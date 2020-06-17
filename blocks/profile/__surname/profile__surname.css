@@ -1,0 +1,19 @@
+.profile__surname {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    grid-area: surname;
+    margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .profile__surname {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        margin-left: 50px;
+    }
+}
