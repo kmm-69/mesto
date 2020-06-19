@@ -16,7 +16,6 @@
         grid-template-columns: repeat(2, 282px);
         grid-template-rows: repeat(3, 361px);
         grid-gap: 12px 15px;
-        margin-top: 51px;
     }
 }
 

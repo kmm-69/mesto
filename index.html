@@ -12,7 +12,6 @@
     <div class="wrapper">
         <header class="header">
             <img src="./images/logo.png" alt="Логотип место" class="header__logo">
-            <img src="./images/Line.png" alt="Линия в хедере" class="header__line">
         </header>
 
         <section class="profile">
@@ -21,19 +20,19 @@
             <div class="profile__info">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
                 <h2 class="profile__surname">Исследователь океана</h2>
-                <button class="profile__edit"></button>
+                <button type="submit" class="profile__edit"></button>
             </div>
 
-            <button class="profile__addButton"></button>
+            <button type="submit" class="profile__addButton"></button>
 
         </section>
 
         <section class="elements">
             <div class="element">
-                <img src="./images/карачаевск.jpg" alt="Фото Карачаевск" class="element__photo">
+                <img src="./images/карачаевск.png" alt="Фото Карачаевск" class="element__photo">
                 <div class="element__info">
                     <h2 class="element__name">Карачаевск</h2>
-                    <button class="element__like"></button>
+                    <button type="submit" class="element__like"></button>
                 </div>
             </div>
 
@@ -41,7 +40,7 @@
                 <img src="./images/эльбрус.png" alt="Фото Эльбрус" class="element__photo">
                 <div class="element__info">
                     <h2 class="element__name">Гора Эльбрус</h2>
-                    <button class="element__like"></button>
+                    <button type="submit" class="element__like"></button>
                 </div>
             </div>
 
@@ -49,7 +48,7 @@
                 <img src="./images/домбай.png" alt="Фото Домбай" class="element__photo">
                 <div class="element__info">
                     <h2 class="element__name">Домбай</h2>
-                    <button class="element__like"></button>
+                    <button type="submit" class="element__like"></button>
                 </div>
             </div>
 
@@ -57,7 +56,7 @@
                 <img src="./images/эльбрус-2.png" alt="Гора Эльбрус" class="element__photo">
                 <div class="element__info">
                     <h2 class="element__name">Гора Эльбрус</h2>
-                    <button class="element__like"></button>
+                    <button type="submit" class="element__like"></button>
                 </div>
 
             </div>
@@ -66,7 +65,7 @@
                 <img src="./images/домбай-2.png" alt="Фото Домбай" class="element__photo">
                 <div class="element__info">
                     <h2 class="element__name">Домбай</h2>
-                    <button class="element__like"></button>
+                    <button type="submit" class="element__like"></button>
                 </div>
 
             </div>
@@ -75,7 +74,7 @@
                 <img src="./images/карачаево-черкессия.png" alt="Фото Карачаево-Черкессия" class="element__photo">
                 <div class="element__info">
                     <h2 class="element__name">Карачаево-Черкессия</h2>
-                    <button class="element__like"></button>
+                    <button type="submit" class="element__like"></button>
                 </div>
 
             </div>
@@ -90,26 +89,25 @@
     </div>
 
     <section class="popup">
-         <button class="popup__close"></button>
+        <button type="submit" class="popup__close"></button>
         <div class="popup__container">
-           
+
             <h2 class="popup__title">Редактировать профиль</h2>
             <form name="form-name" class="popup__forms">
                 <input type="text" name="user-name" id="user-name" value="Жак-Ив Кусто"
                     class="popup__input popup__input_type_name">
-                <div class="popup__line"></div>
 
                 <input type="text" name="user-job" id="user-job" value="Исследователь океана"
                     class="popup__input popup__input_type_job">
-                <div class="popup__line"></div>
+
                 <button type="submit" class="popup__saveButton">Сохранить</button>
             </form>
 
         </div>
     </section>
 
-</body>
+    <script src="./scripts/index.js"></script>
 
-<script src="./scripts/index.js"></script>
+</body>
 
 </html>

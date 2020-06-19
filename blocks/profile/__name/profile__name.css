@@ -1,5 +1,5 @@
 .profile__name {
-    font-family: 'Inter';
+    font-family: 'Inter', Arial, sans-serif; 
     font-style: normal;
     font-weight: 500;
     font-size: 42px;
@@ -9,6 +9,9 @@
     margin: 0;
     width: 295px;
     grid-area: name;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1199px) {
@@ -22,7 +25,6 @@
 @media screen and (max-width: 767px) {
     .profile__name {
         font-size: 27px;
-        line-height: 56px;
         text-align: end;
         width: auto;
        
