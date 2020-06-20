@@ -3,8 +3,10 @@
     width: 73.5%;
     margin-left: 159px;
     padding-top: 45px;
-    border-bottom: 1px solid #545454;
+    border-bottom: 1px solid rgba(84, 84, 84, .7);
 }
+
+
 
 @media screen and (max-width: 1199px) {
     .header {
