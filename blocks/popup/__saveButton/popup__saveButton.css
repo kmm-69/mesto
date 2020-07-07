@@ -7,7 +7,7 @@
     box-shadow: none;
     cursor: pointer;
     color: white;
-    font-family: 'Inter', Arial, sans-serif; 
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
 }
@@ -18,7 +18,10 @@
 
 @media screen and (max-width: 767px) {
     .popup__saveButton {
-        width: 265px;
-        margin: 22px 16px 16px;
+        width: 200px;
+        height: 40px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
     }
-}

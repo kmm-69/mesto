@@ -20,11 +20,11 @@
 
 @media screen and (max-width: 767px) {
     .popup__input {
-        width: 265px;
+        width: 200px;
         font-size: 12px;
         line-height: 15px;
-        margin-left: 16px;
-        margin-right: 16px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .popup__input:first-child {
