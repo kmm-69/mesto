@@ -104,42 +104,8 @@ function addCard(card) {
         openViewPopup();
     });
 
-
     elementsList.prepend(initialCard);
 };
-
-
-
-function deleteCard(event) {
-    const initialCard = event.target.closest('.element');
-    initialCard.remove();
-}
-
-function likeToggle(event) {
-    event.target.classList.toggle('element__like-active');
-}
-
-function formElementAdd(event) {
-    event.preventDefault();
-    const newName = addNameInput.value;
-    const newLink = addSourceInput.src;
-    const newCard = { name: newName, link: newLink };
-    addNameInput.value = '';
-    addSourceInput.src = '';
-    addCard(newCard);
-    closeAddPopup();
-}
-
-initialCards.forEach(card => {
-    addCard(card);
-
-})
-
-
-addButton.addEventListener('click', openAddPopup);
-popupAddCloseButton.addEventListener('click', closeAddPopup);
-submitAddButton.addEventListener('click', formElementAdd);
-
 
 
 //3.попап просмотра изображений
@@ -156,6 +122,40 @@ const closeViewPopup = function () {
 }
 
 popupViewCloseButton.addEventListener('click', closeViewPopup);
+
+
+function deleteCard(event) {
+    const initialCard = event.target.closest('.element');
+    initialCard.remove();
+}
+
+function likeToggle(event) {
+    event.target.classList.toggle('element__like-active');
+}
+
+function formElementAdd(event) {
+    event.preventDefault();
+    const newName = addNameInput.value;
+    const newLink = addSourceInput.value;
+    const newCard = { name: newName, link: newLink };
+    addNameInput.value = '';
+    addSourceInput.value = '';
+    addCard(newCard);
+    closeAddPopup();
+}
+
+initialCards.forEach(card => {
+    addCard(card);
+
+})
+
+
+addButton.addEventListener('click', openAddPopup);
+popupAddCloseButton.addEventListener('click', closeAddPopup);
+submitAddButton.addEventListener('click', formElementAdd);
+
+
+
 
 
 
