@@ -8,6 +8,7 @@
     background-image: url(../../../images/Close\ Icon.png);
     background-size: cover;
     border: none;
+    cursor: pointer;
 }
 
 .popup__close:hover {
