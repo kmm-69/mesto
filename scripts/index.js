@@ -37,10 +37,8 @@ const popupCloseButton = document.querySelector('.popup__close_type_profile');
 const profileSubmitButton = document.querySelector('.popup__forms_type_edit');
 const nameInput = document.querySelector('.popup__input_type_name');
 const jobInput = document.querySelector('.popup__input_type_job');
-
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__surname');
-
 
 //2. попап добавления
 const popupCard = document.querySelector('.popup_type_add-card');
@@ -50,28 +48,24 @@ const popupAddNameInput = document.querySelector('.popup__input_type_add-name');
 const popupAddSourceInput = document.querySelector('.popup__input_type_source');
 const popupSubmitButton = document.querySelector('.popup__saveButton_type_add-card');
 
-
 //3.попап просмотра изображений
 const popupViewImage = document.querySelector('.popup_type_photo');
 const popupViewCloseButton = document.querySelector('.popup__close_type_photo');
 
-
 //открытие попапа
- function openPopup(somePopup) {
+function openPopup(somePopup) {
     somePopup.classList.add('popup_opened');
 }
 
 //закрытие попапа
 function closePopup(somePopup) {
     somePopup.classList.remove('popup_opened');
-  }
-  
+}
 
 //заполенение полей при открытии редактирования профиля
 function insertProfilePopupText() {
     nameInput.value = profileName.textContent;
     jobInput.value = profileJob.textContent;
-
 }
 
 //отправка формы 
@@ -80,7 +74,6 @@ function formSubmitHandler(event) {
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
     closePopup(popupProfile);
-
 }
 
 //добавление новых карточек
@@ -90,7 +83,7 @@ function formElementAdd(event) {
     popupAddNameInput.value = '';
     popupAddSourceInput.value = '';
     renderCard(newCard);
-    closePopup(popupCard);   
+    closePopup(popupCard);
 }
 
 //функция создания карточек
@@ -98,17 +91,15 @@ function addCard(card) {
     const item = elementsTemplateElement.content.cloneNode(true);
     const popupElementName = item.querySelector('.element__name');
     const popupElementSource = item.querySelector('.element__photo');
-    
+
     const popupDeleteButton = item.querySelector('.element__delete-btn');
     const popupLikeButton = item.querySelector('.element__like');
     const popupViewImagePhoto = document.querySelector('.popup__photo');
     const popupViewImageCaption = document.querySelector('.popup__photo-caption');
-    
 
     popupElementName.textContent = card.name;
     popupElementSource.src = card.link;
     popupElementSource.alt = card.name;
-
 
     popupDeleteButton.addEventListener('click', deleteCard);
     popupLikeButton.addEventListener('click', likeToggle);
@@ -122,20 +113,19 @@ function addCard(card) {
     });
 
     return item;
-
 }
 
 //рендеринг карточки
 function renderCard(card) {
     const cardRendered = addCard(card);
     elementsList.prepend(cardRendered);
-  }  
+}
 
 
 //проход по массиву
 initialCards.forEach(card => {
     renderCard(card);
-    
+
 })
 
 //удаление карточки
@@ -149,21 +139,18 @@ function likeToggle(event) {
     event.target.classList.toggle('element__like-active');
 }
 
-
-
-
-profileEditButton.addEventListener('click', () => {openPopup(popupProfile)
-    insertProfilePopupText()});
-popupCloseButton.addEventListener('click', closePopup(popupProfile));
+profileEditButton.addEventListener('click', () => {
+    openPopup(popupProfile)
+    insertProfilePopupText()
+});
+popupCloseButton.addEventListener('click', () => closePopup(popupProfile));
 profileSubmitButton.addEventListener('submit', formSubmitHandler);
 
-
-popupAddButton.addEventListener('click', () => {openPopup(popupCard)});
-popupAddCloseButton.addEventListener('click', () => {closePopup(popupCard)});
+popupAddButton.addEventListener('click', () => openPopup(popupCard));
+popupAddCloseButton.addEventListener('click', () => closePopup(popupCard));
 popupSubmitButton.addEventListener('click', formElementAdd);
 
-
-popupViewCloseButton.addEventListener('click', () => {closePopup(popupViewImage)});
+popupViewCloseButton.addEventListener('click', () => closePopup(popupViewImage));
 
 
 
