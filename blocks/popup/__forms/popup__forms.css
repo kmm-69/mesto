@@ -1,3 +1,9 @@
 .popup__forms {
-    margin:0;
+    margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__forms {
+       
+    }
 }

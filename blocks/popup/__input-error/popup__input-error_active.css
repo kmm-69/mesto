@@ -1,0 +1,22 @@
+.popup__input-error_active {
+    margin-left: 36px;
+    margin-right: 36px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__input-error_active {
+        width: 200px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .popup__input-error_active:first-child {
+        margin-bottom: 5px;
+    }
+}
