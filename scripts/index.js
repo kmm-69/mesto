@@ -56,6 +56,7 @@ const popupViewCloseButton = document.querySelector('.popup__close_type_photo');
 function openPopup(somePopup) {
     somePopup.classList.add('popup_opened');
     document.addEventListener('keyup', handleEscKey);
+    enableValidation();
 }
 
 //закрытие попапа по Esc
@@ -70,9 +71,7 @@ function handleEscKey(event) {
 //закрытие попапа
 function closePopup(somePopup) {
     somePopup.classList.remove('popup_opened');
-    document.addEventListener('keyup', function (evt) {
-        evt.preventDefault();
-    });
+    document.removeEventListener('keyup', handleEscKey);
 }
 
 //заполенение полей при открытии редактирования профиля
@@ -182,19 +181,3 @@ popupViewImage.addEventListener('click', (event) => {
         closePopup(popupViewImage);
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
