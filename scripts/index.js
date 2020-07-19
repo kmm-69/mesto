@@ -54,9 +54,9 @@ const popupViewCloseButton = document.querySelector('.popup__close_type_photo');
 
 //открытие попапа
 function openPopup(somePopup) {
+    togglePopup();
     somePopup.classList.add('popup_opened');
     document.addEventListener('keyup', handleEscKey);
-    enableValidation();
 }
 
 //закрытие попапа по Esc
@@ -137,7 +137,6 @@ function renderCard(card) {
 //проход по массиву
 initialCards.forEach(card => {
     renderCard(card);
-
 })
 
 //удаление карточки
@@ -149,6 +148,13 @@ function deleteCard(event) {
 //лайк карточки
 function likeToggle(event) {
     event.target.classList.toggle('element__like-active');
+}
+
+function togglePopup() {
+    const inputList = Array.from(popupCard.querySelectorAll('.popup__input'));
+    const buttonElement = popupCard.querySelector('.popup__saveButton');
+    const inactiveButtonClass = ('popup__saveButton_inactive');
+    toggleButtonState({ inputList, buttonElement, inactiveButtonClass });
 }
 
 profileEditButton.addEventListener('click', () => {
