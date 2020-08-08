@@ -46,14 +46,15 @@ export default class Card {
     _deleteCard() {
         this._element.remove();
     }
-
-
+    
     _popupGrow() {
-        popupViewImage.querySelector('.popup__photo').src = this._link;
-        popupViewImage.querySelector('.popup__photo-caption').textContent = this._name;
-        popupViewImage.querySelector('.popup__photo').alt = this._name;
+        this._popupViewImage = document.querySelector('.popup__photo');
+        this._popupViewImageCaption = document.querySelector('.popup__photo-caption');
+        this._popupViewImage.src = this._link;
+        this._popupViewImageCaption.textContent = this._name;
+        this._popupViewImage.alt = this._name;
         openPopup(popupViewImage);
     }
 }
-
-
+import {openPopup} from './utilits.js';
+import {popupViewImage} from './index.js';
