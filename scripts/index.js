@@ -1,7 +1,7 @@
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
-import {initialCards} from './initialCards.js';
-import {openPopup, handleEscKey, closePopup} from './utilits.js';
+import { initialCards } from './initialCards.js';
+import { openPopup, handleEscKey, closePopup } from './utilits.js';
 
 const elementsList = document.querySelector('.elements');
 const elementsTemplateElement = document.querySelector('.elements-template');
@@ -69,12 +69,12 @@ function formElementAdd(event) {
     const inputCardLink = popupAddSourceInput.value
     popupAddNameInput.value = '';
     popupAddSourceInput.value = '';
-    buttonElement.setAttribute('disabled', true);
-    buttonElement.classList.add('popup__saveButton_inactive'); 
     const newCard = new Card(inputCardName, inputCardLink);
     const cardElement = newCard.generateCard();
     elementsList.prepend(cardElement);
     closePopup(popupCard);
+    formEditValidator.buttonDisable();
+    formAddValidator.buttonDisable();
 }
 
 profileEditButton.addEventListener('click', () => {
