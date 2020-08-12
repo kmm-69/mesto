@@ -60,6 +60,7 @@ function formSubmitHandler(event) {
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
     closePopup(popupProfile);
+    formEditValidator.buttonDisable();
 }
 
 //добавление новых карточек
@@ -73,7 +74,6 @@ function formElementAdd(event) {
     const cardElement = newCard.generateCard();
     elementsList.prepend(cardElement);
     closePopup(popupCard);
-    formEditValidator.buttonDisable();
     formAddValidator.buttonDisable();
 }
 
